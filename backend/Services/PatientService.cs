@@ -10,7 +10,7 @@ namespace backend.Services
     {
         public async Task<List<PatientModel>> GetPatientsAsync()
         {
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Helpers", "patients.json");
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "Helpers", "pacientes.json");
             var jsonData = await System.IO.File.ReadAllTextAsync(filePath);
             return JsonConvert.DeserializeObject<List<PatientModel>>(jsonData);
         }
